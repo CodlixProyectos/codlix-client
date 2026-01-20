@@ -21,3 +21,20 @@ body {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
 }
+
+/* Animación de entrada de página */
+.page-content {
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 2.3s;
+  opacity: 0;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

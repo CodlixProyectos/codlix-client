@@ -1,0 +1,49 @@
+<!-- Modal Backdrop -->
+<div *ngIf="isOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300"
+  (click)="onClose()">
+
+  <!-- Modal Content -->
+  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 transform transition-all duration-300"
+    (click)="$event.stopPropagation()">
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-5 rounded-t-2xl">
+      <h3 class="text-2xl font-bold">¡Descubre {{ projectName }}!</h3>
+      <p class="text-blue-100 text-sm mt-1">Parte de nuestro portafolio</p>
+    </div>
+
+    <!-- Body -->
+    <div class="p-6 space-y-4">
+      <p class="text-gray-700 text-base leading-relaxed">
+        Este es uno de nuestros proyectos en producción. ¿Te gustaría probarlo o conocer más sobre cómo podemos ayudarte con una solución similar?
+      </p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+        <p class="text-sm text-blue-900">
+          💡 <span class="font-semibold">Consejo:</span> Si necesitas un sistema como este, agenda una cita con nosotros para discutir tu proyecto.
+        </p>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="px-6 pb-6 space-y-3">
+      <button
+        (click)="onOpenProject()"
+        class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg">
+        Ver Proyecto en Vivo
+      </button>
+
+      <button
+        (click)="onScheduleCall()"
+        class="w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-4 rounded-lg transition-all duration-200">
+        Agenda una Cita con Nosotros
+      </button>
+
+      <button
+        (click)="onClose()"
+        class="w-full text-gray-500 hover:text-gray-700 font-medium py-2 px-4 rounded-lg transition-all duration-200">
+        Cerrar
+      </button>
+    </div>
+  </div>
+</div>

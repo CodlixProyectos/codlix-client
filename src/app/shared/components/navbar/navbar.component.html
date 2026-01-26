@@ -3,7 +3,7 @@
   <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
     <a routerLink="/"
        class="text-2xl font-bold transition-colors"
-       [ngClass]="isScrolled ? 'text-indigo-600 hover:text-indigo-700' : 'text-white hover:text-gray-200'">
+       [ngClass]="isScrolled ? 'text-blue-900 hover:text-blue-800' : 'text-white hover:text-gray-200'">
       CODLIX
     </a>
 
@@ -21,28 +21,28 @@
     <ul class="hidden md:flex gap-8 list-none m-0 p-0">
       <li><a routerLink="/"
              class="font-medium transition-colors no-underline"
-             [ngClass]="isScrolled ? 'text-gray-800 hover:text-indigo-600' : 'text-white hover:text-gray-200'">Inicio</a></li>
+             [ngClass]="isScrolled ? 'text-gray-800 hover:text-blue-900' : 'text-white hover:text-gray-200'">Inicio</a></li>
       <li><a routerLink="/services"
              class="font-medium transition-colors no-underline"
-             [ngClass]="isScrolled ? 'text-gray-800 hover:text-indigo-600' : 'text-white hover:text-gray-200'">Servicios</a></li>
+             [ngClass]="isScrolled ? 'text-gray-800 hover:text-blue-900' : 'text-white hover:text-gray-200'">Servicios</a></li>
       <li><a routerLink="/portfolio"
              class="font-medium transition-colors no-underline"
-             [ngClass]="isScrolled ? 'text-gray-800 hover:text-indigo-600' : 'text-white hover:text-gray-200'">Portafolio</a></li>
+             [ngClass]="isScrolled ? 'text-gray-800 hover:text-blue-900' : 'text-white hover:text-gray-200'">Portafolio</a></li>
       <li><a routerLink="/about"
              class="font-medium transition-colors no-underline"
-             [ngClass]="isScrolled ? 'text-gray-800 hover:text-indigo-600' : 'text-white hover:text-gray-200'">Nosotros</a></li>
+             [ngClass]="isScrolled ? 'text-gray-800 hover:text-blue-900' : 'text-white hover:text-gray-200'">Nosotros</a></li>
       <li><a routerLink="/contact"
-             class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition-colors no-underline">Contacto</a></li>
+             class="bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition-colors no-underline">Contacto</a></li>
     </ul>
 
     <!-- Menu mobile desplegable -->
     <ul *ngIf="isMenuOpen"
         class="md:hidden absolute top-full left-0 w-full bg-white flex flex-col p-4 shadow-lg list-none">
-      <li class="py-2"><a routerLink="/" (click)="toggleMenu()" class="text-gray-800 font-medium hover:text-indigo-600 transition-colors no-underline">Inicio</a></li>
-      <li class="py-2"><a routerLink="/services" (click)="toggleMenu()" class="text-gray-800 font-medium hover:text-indigo-600 transition-colors no-underline">Servicios</a></li>
-      <li class="py-2"><a routerLink="/portfolio" (click)="toggleMenu()" class="text-gray-800 font-medium hover:text-indigo-600 transition-colors no-underline">Portafolio</a></li>
-      <li class="py-2"><a routerLink="/about" (click)="toggleMenu()" class="text-gray-800 font-medium hover:text-indigo-600 transition-colors no-underline">Nosotros</a></li>
-      <li class="py-2"><a routerLink="/contact" (click)="toggleMenu()" class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition-colors no-underline inline-block text-center">Contacto</a></li>
+      <li class="py-2"><a routerLink="/" (click)="toggleMenu()" class="text-gray-800 font-medium hover:text-blue-900 transition-colors no-underline">Inicio</a></li>
+      <li class="py-2"><a routerLink="/services" (click)="toggleMenu()" class="text-gray-800 font-medium hover:text-blue-900 transition-colors no-underline">Servicios</a></li>
+      <li class="py-2"><a routerLink="/portfolio" (click)="toggleMenu()" class="text-gray-800 font-medium hover:text-blue-900 transition-colors no-underline">Portafolio</a></li>
+      <li class="py-2"><a routerLink="/about" (click)="toggleMenu()" class="text-gray-800 font-medium hover:text-blue-900 transition-colors no-underline">Nosotros</a></li>
+      <li class="py-2"><a routerLink="/contact" (click)="toggleMenu()" class="bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition-colors no-underline inline-block text-center">Contacto</a></li>
     </ul>
   </div>
 </nav>

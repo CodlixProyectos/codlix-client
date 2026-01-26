@@ -1,60 +1,99 @@
-<!-- Sidebar minimalista - estrecho que se expande en hover o click -->
+<!-- Overlay para cerrar sidebar en mobile -->
+<div
+  *ngIf="isExpanded && isMobileMenuOpen"
+  class="fixed inset-0 bg-black bg-opacity-50 z-[998] lg:hidden"
+  (click)="closeMobileSidebar()">
+</div>
+
+<!-- Sidebar responsivo -->
 <aside
-  [ngClass]="isExpanded ? 'w-64' : 'w-16'"
-  style="position: fixed; top: 0; left: 0; height: 100vh; z-index: 1000;"
-  class="bg-white border-r border-gray-200 shadow-lg transition-all duration-300">
+  [ngClass]="{
+    'w-72': isExpanded,
+    'w-20': !isExpanded,
+    'translate-x-0': !isMobileMenuOpen,
+    '-translate-x-full lg:translate-x-0': isMobileMenuOpen === false
+  }"
+  class="fixed top-0 left-0 h-screen z-[999] bg-white border-r border-gray-200 shadow-lg transition-all duration-300 ease-in-out">
+
   <div class="h-full flex flex-col">
-    <!-- Logo -->
-    <div class="py-3 px-2 flex items-center gap-3 w-full flex-shrink-0"
-      [ngClass]="isExpanded ? 'justify-start px-4' : 'justify-center'" (click)="expandSidebar()">
-      <div
-        class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-md flex-shrink-0">
-        C
+    <!-- Header con Logo y Botón Cerrar (mobile) -->
+    <div class="flex items-center justify-between py-3 px-2 flex-shrink-0"
+      [ngClass]="isExpanded ? 'px-4' : 'justify-center'">
+
+      <div class="flex items-center gap-3 cursor-pointer" (click)="expandSidebar()">
+        <div
+          class="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-md flex-shrink-0">
+          C
+        </div>
+        <span class="text-xl font-bold text-slate-900 whitespace-nowrap transition-all duration-300"
+          [ngClass]="isExpanded ? 'opacity-100' : 'opacity-0 w-0 overflow-hidden'">
+          CODLIX
+        </span>
       </div>
-      <span class="text-xl font-bold text-slate-900 whitespace-nowrap transition-all duration-300"
-        [ngClass]="isExpanded ? 'opacity-100' : 'opacity-0 w-0 overflow-hidden'">
-        CODLIX
-      </span>
+
+      <!-- Botón cerrar (solo visible en mobile cuando está expandido) -->
+      <button
+        *ngIf="isExpanded"
+        (click)="closeMobileSidebar()"
+        class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
     </div>
 
     <!-- Navegación -->
-    <nav class="space-y-2 px-4 mb-6 mt-4" [ngClass]="isExpanded ? 'block' : 'hidden'" (click)="expandSidebar()">
-      <a routerLink="/" routerLinkActive="bg-blue-50 text-blue-600" [routerLinkActiveOptions]="{ exact: true }"
-        class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+    <nav class="space-y-2 px-4 mb-6 mt-4" [ngClass]="isExpanded ? 'block' : 'hidden'">
+      <a routerLink="/"
+         routerLinkActive="bg-blue-50 text-blue-900"
+         [routerLinkActiveOptions]="{ exact: true }"
+         (click)="onLinkClick()"
+         class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all">
         <span class="font-medium text-sm">Inicio</span>
       </a>
 
-      <a routerLink="/services" routerLinkActive="bg-blue-50 text-blue-600"
-        class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+      <a routerLink="/services"
+         routerLinkActive="bg-blue-50 text-blue-900"
+         (click)="onLinkClick()"
+         class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all">
         <span class="font-medium text-sm">Servicios</span>
       </a>
 
-      <a routerLink="/portfolio" routerLinkActive="bg-blue-50 text-blue-600"
-        class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+      <a routerLink="/portfolio"
+         routerLinkActive="bg-blue-50 text-blue-900"
+         (click)="onLinkClick()"
+         class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all">
         <span class="font-medium text-sm">Portafolio</span>
       </a>
 
-      <a routerLink="/about" routerLinkActive="bg-blue-50 text-blue-600"
-        class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+      <a routerLink="/about"
+         routerLinkActive="bg-blue-50 text-blue-900"
+         (click)="onLinkClick()"
+         class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all">
         <span class="font-medium text-sm">Nosotros</span>
       </a>
 
-      <a routerLink="/contact" routerLinkActive="bg-blue-50 text-blue-600"
-        class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+      <a routerLink="/contact"
+         routerLinkActive="bg-blue-50 text-blue-900"
+         (click)="onLinkClick()"
+         class="flex items-center px-4 py-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all">
         <span class="font-medium text-sm">Contacto</span>
       </a>
     </nav>
 
     <!-- CTA Button expandido -->
-    <div class="px-4 mb-6" [ngClass]="isExpanded ? 'block' : 'hidden'" (click)="expandSidebar()">
+    <div class="px-4 mb-6" [ngClass]="isExpanded ? 'block' : 'hidden'">
       <a routerLink="/contact"
-        class="flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all">
+         (click)="onLinkClick()"
+         class="flex items-center justify-center w-full bg-gradient-to-r from-blue-900 to-blue-800 hover:from-blue-800 hover:to-blue-700 text-white px-4 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all">
         <span class="text-sm">Iniciar Proyecto</span>
       </a>
     </div>
 
     <!-- Nombre CODLIX vertical centrado cuando está colapsado -->
-    <div class="flex-1 flex items-center justify-center" [ngClass]="isExpanded ? 'hidden' : 'flex'" (click)="expandSidebar()">
+    <div class="flex-1 flex items-center justify-center cursor-pointer"
+         [ngClass]="isExpanded ? 'hidden' : 'flex'"
+         (click)="expandSidebar()">
       <span class="text-lg font-extrabold text-slate-800 tracking-widest uppercase"
         style="writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.2em;">
         CODLIX
@@ -65,8 +104,10 @@
     <div class="flex-1" [ngClass]="isExpanded ? 'block' : 'hidden'"></div>
 
     <!-- Botón de contacto vertical - al fondo -->
-    <a routerLink="/contact" [ngClass]="isExpanded ? 'hidden' : 'flex'"
-      class="w-16 h-36 items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white transition-colors shadow-lg flex-shrink-0">
+    <a routerLink="/contact"
+       [ngClass]="isExpanded ? 'hidden' : 'flex'"
+       (click)="onLinkClick()"
+       class="w-full h-36 items-center justify-center bg-gradient-to-r from-blue-900 to-blue-800 hover:from-blue-800 hover:to-blue-700 text-white transition-colors shadow-lg flex-shrink-0">
       <span class="text-sm font-extrabold tracking-widest whitespace-nowrap uppercase"
         style="writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.25em;">
         Contacto
@@ -74,3 +115,12 @@
     </a>
   </div>
 </aside>
+
+<!-- Botón hamburguesa flotante (solo mobile) -->
+<button
+  (click)="toggleMobileSidebar()"
+  class="lg:hidden fixed top-4 left-4 z-[1000] p-3 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all border border-gray-200">
+  <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+</button>

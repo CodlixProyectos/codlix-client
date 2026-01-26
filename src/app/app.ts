@@ -7,7 +7,7 @@ import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SidebarComponent, FooterComponent, PageLoaderComponent],
+  imports: [RouterOutlet, SidebarComponent, FooterComponent],
   templateUrl: './app.html'
 })
 export class App implements OnInit {

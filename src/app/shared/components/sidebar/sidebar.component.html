@@ -13,7 +13,7 @@
     '-translate-x-full': isMobile && !isExpanded,
     'translate-x-0': !isMobile || isExpanded
   }"
-  class="fixed top-0 left-0 h-screen z-[999] bg-white border-r border-gray-200 shadow-lg transition-all duration-300 ease-in-out">
+  class="fixed top-0 left-0 h-screen z-[999] bg-white shadow-lg transition-all duration-300 ease-in-out">
 
   <div class="h-full flex flex-col">
     <!-- Header con Logo y Botón Cerrar (mobile) -->
@@ -103,15 +103,24 @@
     <!-- Espaciador cuando está expandido -->
     <div class="flex-1" [ngClass]="isExpanded ? 'block' : 'hidden'"></div>
 
+    <!-- Botón hamburguesa vertical - cuando está colapsado -->
+    <button
+      [ngClass]="isExpanded ? 'hidden' : 'flex'"
+      (click)="expandSidebar()"
+      class="w-full h-20 items-center justify-center bg-white hover:bg-gray-100 border-t border-gray-200 transition-colors flex-shrink-0">
+      <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
     <!-- Botón de contacto vertical - al fondo -->
     <a routerLink="/contact"
        [ngClass]="isExpanded ? 'hidden' : 'flex'"
        (click)="onLinkClick()"
-       class="w-full h-36 items-center justify-center bg-gradient-to-r from-blue-900 to-blue-800 hover:from-blue-800 hover:to-blue-700 text-white transition-colors shadow-lg flex-shrink-0">
-      <span class="text-sm font-extrabold tracking-widest whitespace-nowrap uppercase"
-        style="writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.25em;">
-        Contacto
-      </span>
+       class="w-full h-20 items-center justify-center bg-gradient-to-r from-blue-900 to-blue-800 hover:from-blue-800 hover:to-blue-700 text-white transition-colors flex-shrink-0">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+      </svg>
     </a>
   </div>
 </aside>

@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { SidebarService } from '../../../core/services/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,30 +12,41 @@ import { CommonModule } from '@angular/common';
 export class SidebarComponent {
   isExpanded = false;
   isMobileMenuOpen = false;
+  isMobile = window.innerWidth < 1024;
+
+  constructor(private sidebarService: SidebarService) {}
 
   expandSidebar() {
     this.isExpanded = true;
+    if (this.isMobile) {
+      this.isMobileMenuOpen = true;
+    } else {
+      this.sidebarService.expand();
+    }
   }
 
   collapseSidebar() {
     this.isExpanded = false;
+    if (this.isMobile) {
+      this.isMobileMenuOpen = false;
+    } else {
+      this.sidebarService.collapse();
+    }
   }
 
   toggleMobileSidebar() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
-    if (this.isMobileMenuOpen) {
-      this.isExpanded = true;
-    }
+    this.isExpanded = this.isMobileMenuOpen;
   }
 
   closeMobileSidebar() {
     this.isMobileMenuOpen = false;
-    this.collapseSidebar();
+    this.isExpanded = false;
   }
 
   onLinkClick() {
     // En mobile, cerrar el sidebar al hacer click en un link
-    if (window.innerWidth < 1024) {
+    if (this.isMobile) {
       this.closeMobileSidebar();
     }
   }
@@ -46,7 +58,7 @@ export class SidebarComponent {
     const hamburgerButton = target.closest('button');
 
     // Solo colapsar en desktop cuando se hace click fuera
-    if (window.innerWidth >= 1024) {
+    if (!this.isMobile) {
       if (sidebar && !sidebar.contains(target) && !hamburgerButton) {
         this.collapseSidebar();
       }
@@ -55,9 +67,12 @@ export class SidebarComponent {
 
   @HostListener('window:resize')
   onResize() {
+    this.isMobile = window.innerWidth < 1024;
+
     // Cerrar mobile menu si se redimensiona a desktop
-    if (window.innerWidth >= 1024) {
+    if (!this.isMobile) {
       this.isMobileMenuOpen = false;
+      this.isExpanded = false;
     }
   }
 }

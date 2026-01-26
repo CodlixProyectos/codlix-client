@@ -1,9 +1,11 @@
 <div class="bg-slate-50 page-content">
   <app-sidebar></app-sidebar>
-  <main class="min-h-screen ml-20 lg:ml-20 transition-all duration-300">
+  <main class="min-h-screen ml-0 lg:ml-20 transition-all duration-300"
+        [class.lg:!ml-72]="sidebarService.isExpanded() && !sidebarService.isMobile()">
     <router-outlet></router-outlet>
   </main>
-  <div class="ml-20 lg:ml-20 transition-all duration-300">
+  <div class="ml-0 lg:ml-20 transition-all duration-300"
+       [class.lg:!ml-72]="sidebarService.isExpanded() && !sidebarService.isMobile()">
     <app-footer></app-footer>
   </div>
 </div>

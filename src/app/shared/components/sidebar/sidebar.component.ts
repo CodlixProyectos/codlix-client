@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../../../core/services/sidebar.service';
+import { NavigationService } from '../../../core/services/navigation.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,7 +15,10 @@ export class SidebarComponent {
   isMobileMenuOpen = false;
   isMobile = window.innerWidth < 1024;
 
-  constructor(private sidebarService: SidebarService) {}
+  constructor(
+    private sidebarService: SidebarService,
+    public navigationService: NavigationService
+  ) {}
 
   expandSidebar() {
     this.isExpanded = true;

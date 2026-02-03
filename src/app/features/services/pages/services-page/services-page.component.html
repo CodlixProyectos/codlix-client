@@ -21,69 +21,111 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-8 gap-y-32 md:gap-y-40 pt-28 md:pt-32">
 
         <!-- Desarrollo Web -->
-        <div class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible">
-          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80">
+        <div (click)="navigateToService('desarrollo-web')"
+             class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible cursor-pointer transition-all duration-300 hover:border-blue-900 hover:shadow-2xl hover:scale-105 group">
+          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80 transition-transform duration-300 group-hover:scale-110">
             <img src="assets/banner-servicios/banner-diseñoWeb.png" alt="Desarrollo Web"
               class="w-full h-full object-contain drop-shadow-2xl select-none pointer-events-none" draggable="false" />
           </div>
-          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16">Desarrollo Web</h3>
-          <p class="text-slate-600 leading-relaxed font-medium">Aplicaciones web modernas, responsivas y escalables con
+          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16 group-hover:text-blue-900 transition-colors">Desarrollo Web</h3>
+          <p class="text-slate-600 leading-relaxed font-medium mb-4">Aplicaciones web modernas, responsivas y escalables con
             React, Angular y Vue. Experiencias web de alto rendimiento.</p>
+          <span class="text-blue-900 font-bold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            Ver más detalles
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
         </div>
 
         <!-- Desarrollo Móvil -->
-        <div class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible">
-          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80">
+        <div (click)="navigateToService('desarrollo-movil')"
+             class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible cursor-pointer transition-all duration-300 hover:border-blue-900 hover:shadow-2xl hover:scale-105 group">
+          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80 transition-transform duration-300 group-hover:scale-110">
             <img src="assets/banner-servicios/bannerMovil.png" alt="Desarrollo Móvil"
               class="w-full h-full object-contain drop-shadow-2xl select-none pointer-events-none" draggable="false" />
           </div>
-          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16">Desarrollo Móvil</h3>
-          <p class="text-slate-600 leading-relaxed font-medium">Apps nativas y multiplataforma para iOS y Android con
+          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16 group-hover:text-blue-900 transition-colors">Desarrollo Móvil</h3>
+          <p class="text-slate-600 leading-relaxed font-medium mb-4">Apps nativas y multiplataforma para iOS y Android con
             React Native, Flutter o desarrollo nativo de alto rendimiento.</p>
+          <span class="text-blue-900 font-bold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            Ver más detalles
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
         </div>
 
         <!-- Diseño UX/UI -->
-        <div class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible">
-          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80">
+        <div (click)="navigateToService('diseno-ux-ui')"
+             class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible cursor-pointer transition-all duration-300 hover:border-blue-900 hover:shadow-2xl hover:scale-105 group">
+          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80 transition-transform duration-300 group-hover:scale-110">
             <img src="assets/banner-servicios/banner-Ux.png" alt="Diseño UX/UI"
               class="w-full h-full object-contain drop-shadow-2xl select-none pointer-events-none" draggable="false" />
           </div>
-          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16">Diseño UX/UI</h3>
-          <p class="text-slate-600 leading-relaxed font-medium">Interfaces intuitivas y experiencias de usuario
+          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16 group-hover:text-blue-900 transition-colors">Diseño UX/UI</h3>
+          <p class="text-slate-600 leading-relaxed font-medium mb-4">Interfaces intuitivas y experiencias de usuario
             excepcionales. Diseños modernos centrados en el usuario.</p>
+          <span class="text-blue-900 font-bold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            Ver más detalles
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
         </div>
 
         <!-- Desarrollo de Software -->
-        <div class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible">
-          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80">
+        <div (click)="navigateToService('desarrollo-software')"
+             class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible cursor-pointer transition-all duration-300 hover:border-blue-900 hover:shadow-2xl hover:scale-105 group">
+          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80 transition-transform duration-300 group-hover:scale-110">
             <img src="assets/banner-servicios/banner-desarrolloweb.png" alt="Desarrollo de Software"
               class="w-full h-full object-contain drop-shadow-2xl select-none pointer-events-none" draggable="false" />
           </div>
-          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16">Desarrollo de Software</h3>
-          <p class="text-slate-600 leading-relaxed font-medium">Software a medida, sistemas empresariales y aplicaciones
+          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16 group-hover:text-blue-900 transition-colors">Desarrollo de Software</h3>
+          <p class="text-slate-600 leading-relaxed font-medium mb-4">Software a medida, sistemas empresariales y aplicaciones
             de escritorio con las mejores prácticas de desarrollo.</p>
+          <span class="text-blue-900 font-bold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            Ver más detalles
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
         </div>
 
         <!-- Optimización de SEO -->
-        <div class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible">
-          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80">
+        <div (click)="navigateToService('optimizacion-seo')"
+             class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible cursor-pointer transition-all duration-300 hover:border-blue-900 hover:shadow-2xl hover:scale-105 group">
+          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80 transition-transform duration-300 group-hover:scale-110">
             <img src="assets/banner-servicios/banner-seo.png" alt="Optimización de SEO"
               class="w-full h-full object-contain drop-shadow-2xl select-none pointer-events-none" draggable="false" />
           </div>
-          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16">Optimización de SEO</h3>
-          <p class="text-slate-600 leading-relaxed font-medium">Posicionamiento web, optimización on-page y off-page,
+          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16 group-hover:text-blue-900 transition-colors">Optimización de SEO</h3>
+          <p class="text-slate-600 leading-relaxed font-medium mb-4">Posicionamiento web, optimización on-page y off-page,
             análisis de palabras clave y auditorías SEO completas.</p>
+          <span class="text-blue-900 font-bold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            Ver más detalles
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
         </div>
 
         <!-- Ciberseguridad -->
-        <div class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible">
-          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80">
+        <div (click)="navigateToService('ciberseguridad')"
+             class="relative p-8 bg-white border-2 border-slate-200 rounded-3xl overflow-visible cursor-pointer transition-all duration-300 hover:border-blue-900 hover:shadow-2xl hover:scale-105 group">
+          <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-80 h-80 transition-transform duration-300 group-hover:scale-110">
             <img src="assets/banner-servicios/banner-security.png" alt="Ciberseguridad"
               class="w-full h-full object-contain drop-shadow-2xl select-none pointer-events-none" draggable="false" />
           </div>
-          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16">Ciberseguridad</h3>
-          <p class="text-slate-600 leading-relaxed font-medium">Protección integral, auditorías de seguridad, cumplimiento
+          <h3 class="text-2xl font-black mb-4 text-slate-900 pt-16 group-hover:text-blue-900 transition-colors">Ciberseguridad</h3>
+          <p class="text-slate-600 leading-relaxed font-medium mb-4">Protección integral, auditorías de seguridad, cumplimiento
             normativo y testing de penetración.</p>
+          <span class="text-blue-900 font-bold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            Ver más detalles
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
         </div>
 
       </div>

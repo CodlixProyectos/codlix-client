@@ -1,0 +1,179 @@
+<div *ngIf="service" class="w-full bg-white">
+  <!-- Hero Section -->
+  <section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <button (click)="goBack()" class="flex items-center gap-2 text-blue-100 hover:text-white mb-8 transition-colors group">
+        <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Volver al Inicio
+      </button>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            {{ service.title }}
+          </h1>
+          <p class="text-xl sm:text-2xl text-blue-100 mb-6 font-medium">
+            {{ service.subtitle }}
+          </p>
+          <p class="text-lg text-blue-50 mb-8 leading-relaxed">
+            {{ service.description }}
+          </p>
+          <button (click)="goToContact()" class="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+            Solicitar Cotización
+          </button>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="w-full max-w-lg">
+            <img [src]="service.image" [alt]="service.title" class="w-full h-auto drop-shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          Características <span class="text-blue-900">Principales</span>
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Todo lo que incluye nuestro servicio de {{ service.title }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let feature of service.features"
+             class="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-900 hover:shadow-xl transition-all duration-300 group">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-900 transition-colors">
+            <svg class="w-8 h-8 text-blue-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="feature.icon"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">{{ feature.title }}</h3>
+          <p class="text-slate-600 leading-relaxed">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          <span class="text-blue-900">Tecnologías</span> que Utilizamos
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Trabajamos con las herramientas más modernas y confiables de la industria
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <span *ngFor="let tech of service.technologies"
+              class="px-6 py-3 bg-slate-50 border-2 border-slate-200 text-slate-900 rounded-full font-bold text-lg hover:bg-blue-900 hover:text-white hover:border-blue-900 transition-all duration-300 cursor-default">
+          {{ tech }}
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          Beneficios <span class="text-blue-900">para tu Negocio</span>
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Impacto real y medible en tu empresa
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div *ngFor="let benefit of service.benefits; let i = index"
+             class="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:shadow-xl transition-all duration-300"
+             [class.border-blue-900]="i === 0">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-3">{{ benefit.title }}</h3>
+              <p class="text-slate-600 leading-relaxed text-lg">{{ benefit.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          Nuestro <span class="text-blue-900">Proceso</span>
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Metodología probada para garantizar resultados excepcionales
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <div *ngFor="let step of service.process; let isLast = last"
+             class="relative">
+          <div class="flex gap-8 items-start">
+            <!-- Step Number -->
+            <div class="flex-shrink-0">
+              <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                {{ step.step }}
+              </div>
+            </div>
+
+            <!-- Step Content -->
+            <div class="flex-1 pb-12">
+              <h3 class="text-2xl font-bold text-slate-900 mb-3">{{ step.title }}</h3>
+              <p class="text-slate-600 text-lg leading-relaxed">{{ step.description }}</p>
+            </div>
+          </div>
+
+          <!-- Connecting Line -->
+          <div *ngIf="!isLast" class="absolute left-8 top-16 w-0.5 h-full bg-blue-200 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+        ¿Listo para comenzar tu proyecto?
+      </h2>
+      <p class="text-xl text-blue-100 mb-10 leading-relaxed">
+        Agenda una consulta gratuita y descubre cómo podemos transformar tu negocio con {{ service.title }}
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button (click)="goToContact()" class="bg-white text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          Contactar Ahora
+        </button>
+        <button (click)="goBack()" class="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300">
+          Ver Otros Servicios
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

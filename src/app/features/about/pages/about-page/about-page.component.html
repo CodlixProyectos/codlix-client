@@ -87,7 +87,7 @@
         <a routerLink="/contact" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold shadow-lg">
           Contactar Ahora
         </a>
-        <a routerLink="/services" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold">
+        <a (click)="navigationService.scrollToServices()" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold cursor-pointer">
           Ver Servicios
         </a>
       </div>

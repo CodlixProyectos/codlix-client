@@ -24,7 +24,7 @@
           <li><a routerLink="/" class="text-slate-400 hover:text-blue-400 transition-colors no-underline text-sm flex items-center gap-2">
             <span class="w-1.5 h-1.5 bg-blue-900 rounded-full"></span>Inicio
           </a></li>
-          <li><a routerLink="/services" class="text-slate-400 hover:text-blue-400 transition-colors no-underline text-sm flex items-center gap-2">
+          <li><a (click)="navigationService.scrollToServices()" class="text-slate-400 hover:text-blue-400 transition-colors no-underline text-sm flex items-center gap-2 cursor-pointer">
             <span class="w-1.5 h-1.5 bg-blue-900 rounded-full"></span>Servicios
           </a></li>
           <li><a routerLink="/portfolio" class="text-slate-400 hover:text-blue-400 transition-colors no-underline text-sm flex items-center gap-2">

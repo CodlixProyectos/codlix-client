@@ -11,20 +11,21 @@
 
       <!-- Título más grande y espaciado -->
       <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tight">
-        Desarrollo de software
-        <span class="text-blue-900 block mt-3">para tu empresa</span>
+        Software a medida
+        <span class="text-blue-900 block mt-3">que sí encaja en tu negocio</span>
       </h1>
 
       <!-- Descripción mejorada -->
       <p class="text-xl text-slate-600 leading-relaxed max-w-2xl font-light">
-        Te acompañamos en todo el proceso de desarrollo.
-        Desde la idea hasta el lanzamiento, porque <span class="font-semibold text-slate-900">tu éxito es nuestro éxito</span>.
+        Diseñamos y construimos soluciones a la medida de tus procesos. Sin pagos por funciones que no usas,
+        con integración total y escalabilidad real para crecer contigo.
+        <span class="font-semibold text-slate-900">Más control, más eficiencia, más resultados.</span>
       </p>
 
       <!-- Botones más espaciados -->
       <div class="flex flex-col sm:flex-row gap-4 pt-6">
-        <a routerLink="/services"
-           class="group relative inline-flex items-center justify-center px-8 py-4 bg-blue-900 text-white font-semibold rounded-xl overflow-hidden transition-all shadow-lg shadow-blue-900/30 hover:shadow-xl hover:shadow-blue-900/40 hover:-translate-y-0.5">
+        <a (click)="navigationService.scrollToServices()"
+           class="group relative inline-flex items-center justify-center px-8 py-4 bg-blue-900 text-white font-semibold rounded-xl overflow-hidden transition-all shadow-lg shadow-blue-900/30 hover:shadow-xl hover:shadow-blue-900/40 hover:-translate-y-0.5 cursor-pointer">
           <span class="absolute inset-0 bg-blue-800 rounded-xl transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
           <span class="relative z-10 flex items-center text-base">
             Explorar más

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule, Lightbulb, Star, Handshake } from 'lucide-angular';
+import { NavigationService } from '../../../../core/services/navigation.service';
 
 @Component({
   selector: 'app-about-page',
@@ -13,4 +14,6 @@ export class AboutPageComponent {
   readonly lightbulbIcon = Lightbulb;
   readonly starIcon = Star;
   readonly handshakeIcon = Handshake;
+
+  constructor(public navigationService: NavigationService) {}
 }

@@ -44,23 +44,23 @@
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-          Características <span class="text-blue-900">Principales</span>
+          Lo Que <span class="text-blue-900">Incluimos</span>
         </h2>
         <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-          Todo lo que incluye nuestro servicio de {{ service.title }}
+          Aspectos clave que cubrimos en nuestro servicio de {{ service.title }}
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div *ngFor="let feature of service.features"
-             class="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-900 hover:shadow-xl transition-all duration-300 group">
-          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-900 transition-colors">
-            <svg class="w-8 h-8 text-blue-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-900 hover:shadow-lg transition-all duration-300 group">
+          <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-900 transition-colors">
+            <svg class="w-6 h-6 text-blue-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="feature.icon"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">{{ feature.title }}</h3>
-          <p class="text-slate-600 leading-relaxed">{{ feature.description }}</p>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">{{ feature.title }}</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">{{ feature.description }}</p>
         </div>
       </div>
     </div>
@@ -119,39 +119,129 @@
     </div>
   </section>
 
-  <!-- Process Section -->
+  <!-- Project Examples Section -->
   <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-          Nuestro <span class="text-blue-900">Proceso</span>
+          Ejemplos de <span class="text-blue-900">Proyectos</span>
         </h2>
         <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-          Metodología probada para garantizar resultados excepcionales
+          Conoce los tipos de sistemas que podemos desarrollar para tu negocio
         </p>
       </div>
 
-      <div class="space-y-8">
-        <div *ngFor="let step of service.process; let isLast = last"
-             class="relative">
-          <div class="flex gap-8 items-start">
-            <!-- Step Number -->
-            <div class="flex-shrink-0">
-              <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                {{ step.step }}
-              </div>
-            </div>
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div *ngFor="let project of service.projectExamples"
+             (click)="selectProject(project)"
+             class="bg-slate-50 p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg"
+             [class.border-blue-900]="selectedProject?.id === project.id"
+             [class.bg-blue-50]="selectedProject?.id === project.id"
+             [class.border-slate-200]="selectedProject?.id !== project.id">
 
-            <!-- Step Content -->
-            <div class="flex-1 pb-12">
-              <h3 class="text-2xl font-bold text-slate-900 mb-3">{{ step.title }}</h3>
-              <p class="text-slate-600 text-lg leading-relaxed">{{ step.description }}</p>
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors"
+                 [class.bg-blue-900]="selectedProject?.id === project.id"
+                 [class.bg-slate-200]="selectedProject?.id !== project.id">
+              <svg class="w-6 h-6 transition-colors"
+                   [class.text-white]="selectedProject?.id === project.id"
+                   [class.text-slate-600]="selectedProject?.id !== project.id"
+                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="project.icon"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-slate-900 mb-1">{{ project.name }}</h3>
+              <div class="flex items-center gap-2">
+                <span class="text-xs px-2 py-1 rounded-full font-medium"
+                      [class.bg-green-100]="project.complexity === 'Básico'"
+                      [class.text-green-700]="project.complexity === 'Básico'"
+                      [class.bg-yellow-100]="project.complexity === 'Intermedio'"
+                      [class.text-yellow-700]="project.complexity === 'Intermedio'"
+                      [class.bg-red-100]="project.complexity === 'Avanzado'"
+                      [class.text-red-700]="project.complexity === 'Avanzado'">
+                  {{ project.complexity }}
+                </span>
+                <span class="text-xs text-slate-500">{{ project.estimatedTime }}</span>
+              </div>
             </div>
           </div>
 
-          <!-- Connecting Line -->
-          <div *ngIf="!isLast" class="absolute left-8 top-16 w-0.5 h-full bg-blue-200 -z-10"></div>
+          <p class="text-sm text-slate-600 leading-relaxed">{{ project.description }}</p>
         </div>
+      </div>
+
+      <!-- Selected Project Details -->
+      <div *ngIf="selectedProject" class="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-2xl shadow-2xl">
+        <div class="flex items-start justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold mb-2">{{ selectedProject.name }}</h3>
+            <p class="text-blue-100 text-lg">{{ selectedProject.description }}</p>
+          </div>
+          <button (click)="selectProject(selectedProject)" class="text-blue-200 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Features -->
+          <div>
+            <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Características Incluidas
+            </h4>
+            <ul class="space-y-2">
+              <li *ngFor="let feature of selectedProject.features" class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-blue-50">{{ feature }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Use Case & Details -->
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-lg font-bold mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                ¿Para Quién es Ideal?
+              </h4>
+              <p class="text-blue-100 leading-relaxed">{{ selectedProject.useCase }}</p>
+            </div>
+
+            <div class="flex items-center gap-6 pt-4 border-t border-blue-700">
+              <div>
+                <p class="text-sm text-blue-300 mb-1">Complejidad</p>
+                <p class="font-bold">{{ selectedProject.complexity }}</p>
+              </div>
+              <div>
+                <p class="text-sm text-blue-300 mb-1">Tiempo Estimado</p>
+                <p class="font-bold">{{ selectedProject.estimatedTime }}</p>
+              </div>
+            </div>
+
+            <button (click)="goToContact()" class="w-full bg-white text-blue-900 px-6 py-3 rounded-xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300">
+              Solicitar Información
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action when no project selected -->
+      <div *ngIf="!selectedProject" class="text-center py-8 bg-slate-50 rounded-xl border-2 border-dashed border-slate-300">
+        <svg class="w-16 h-16 text-slate-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+        </svg>
+        <p class="text-slate-600 text-lg font-medium mb-2">Selecciona un proyecto para ver más detalles</p>
+        <p class="text-slate-500">Haz clic en cualquier tarjeta para conocer las características y casos de uso</p>
       </div>
     </div>
   </section>

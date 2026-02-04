@@ -2,126 +2,40 @@
   <div class="max-w-7xl mx-auto relative z-10">
     <div class="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
       <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-3 sm:mb-4 md:mb-5 text-slate-900">
-        Software <span class="text-blue-900">a medida</span>
+        Nuestros <span class="text-blue-900">Servicios</span>
       </h2>
       <p class="text-sm sm:text-base md:text-lg text-slate-600 max-w-3xl mx-auto px-2 leading-relaxed">
-        Soluciones creadas para tu operación real. Un sistema hecho a tu medida reduce costos, elimina fricción
-        y te da ventaja competitiva desde el primer día.
+        Soluciones tecnológicas completas para impulsar tu negocio. Desde el desarrollo hasta el mantenimiento, te acompañamos en cada etapa.
       </p>
     </div>
 
     <div class="mt-6 sm:mt-8 md:mt-10 lg:mt-12">
       <div class="mx-auto w-full max-w-7xl space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
-        <!-- Hecho para tus procesos -->
-        <div class="group">
-          <div class="flex flex-col md:flex-row md:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 shrink-0 rounded-xl bg-blue-50 border-2 border-blue-100 flex items-center justify-center">
-              <img src="assets/banner-servicios/banner-diseñoWeb.png" alt="Hecho para tus procesos" class="w-12 h-12 sm:w-14 sm:h-14 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain select-none pointer-events-none" draggable="false" />
+        <!-- Servicios dinámicos -->
+        <div *ngFor="let service of services" 
+             class="group cursor-pointer hover:bg-slate-50 rounded-xl p-3 sm:p-4 transition-all duration-200" 
+             (click)="navigateToService(service.id)">
+          <div class="flex flex-col md:flex-row md:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 pointer-events-none">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 shrink-0 rounded-xl border-2 flex items-center justify-center"
+                 [ngClass]="[getColorClasses(service).bg, getColorClasses(service).border]">
+              <img [src]="service.imagePath || 'assets/banner-servicios/default.png'"
+                   [alt]="service.title"
+                   class="w-12 h-12 sm:w-14 sm:h-14 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain select-none"
+                   draggable="false" />
             </div>
             <div class="flex-1 min-w-0">
               <div class="flex flex-col gap-1.5 md:gap-2">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-slate-900 group-hover:text-blue-900 transition-colors">Hecho para tus procesos</h3>
-                  <span class="text-xs font-semibold text-blue-900/80 bg-blue-50 px-2.5 py-1 rounded-full w-fit">Precisión</span>
-                </div>
-                <p class="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">Se adapta a tu flujo de trabajo y elimina tareas innecesarias. Lo que necesitas, tal como lo necesitas.</p>
+                <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-slate-900 transition-colors"
+                    [ngClass]="getColorClasses(service).hover">
+                  {{ service.title }}
+                </h3>
+                <p class="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
+                  {{ service.description }}
+                </p>
               </div>
             </div>
           </div>
-          <div class="mt-4 md:mt-5 lg:mt-6 h-px bg-gradient-to-r from-blue-100 via-blue-50 to-transparent"></div>
-        </div>
-
-        <!-- Escalable desde el inicio -->
-        <div class="group">
-          <div class="flex flex-col md:flex-row md:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 shrink-0 rounded-xl bg-indigo-50 border-2 border-indigo-100 flex items-center justify-center">
-              <img src="assets/banner-servicios/bannerMovil.png" alt="Escalable desde el inicio" class="w-12 h-12 sm:w-14 sm:h-14 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain select-none pointer-events-none" draggable="false" />
-            </div>
-            <div class="flex-1 min-w-0">
-              <div class="flex flex-col gap-1.5 md:gap-2">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-slate-900 group-hover:text-indigo-900 transition-colors">Escalable desde el inicio</h3>
-                  <span class="text-xs font-semibold text-indigo-900/80 bg-indigo-50 px-2.5 py-1 rounded-full w-fit">Crecimiento</span>
-                </div>
-                <p class="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">Tu software crece contigo: módulos, usuarios y funciones sin volver a empezar ni cambiar de sistema.</p>
-              </div>
-            </div>
-          </div>
-          <div class="mt-4 md:mt-5 lg:mt-6 h-px bg-gradient-to-r from-indigo-100 via-indigo-50 to-transparent"></div>
-        </div>
-
-        <!-- Integración total -->
-        <div class="group">
-          <div class="flex flex-col md:flex-row md:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 shrink-0 rounded-xl bg-purple-50 border-2 border-purple-100 flex items-center justify-center">
-              <img src="assets/banner-servicios/banner-Ux.png" alt="Integración total" class="w-12 h-12 sm:w-14 sm:h-14 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain select-none pointer-events-none" draggable="false" />
-            </div>
-            <div class="flex-1 min-w-0">
-              <div class="flex flex-col gap-1.5 md:gap-2">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-slate-900 group-hover:text-purple-900 transition-colors">Integración total</h3>
-                  <span class="text-xs font-semibold text-purple-900/80 bg-purple-50 px-2.5 py-1 rounded-full w-fit">Conexión</span>
-                </div>
-                <p class="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">Conectamos tu sistema con ERPs, CRMs, pasarelas de pago y cualquier API que uses.</p>
-              </div>
-            </div>
-          </div>
-          <div class="mt-4 md:mt-5 lg:mt-6 h-px bg-gradient-to-r from-purple-100 via-purple-50 to-transparent"></div>
-        </div>
-
-        <!-- Más control y seguridad -->
-        <div class="group">
-          <div class="flex flex-col md:flex-row md:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 shrink-0 rounded-xl bg-cyan-50 border-2 border-cyan-100 flex items-center justify-center">
-              <img src="assets/banner-servicios/banner-desarrolloweb.png" alt="Más control y seguridad" class="w-12 h-12 sm:w-14 sm:h-14 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain select-none pointer-events-none" draggable="false" />
-            </div>
-            <div class="flex-1 min-w-0">
-              <div class="flex flex-col gap-1.5 md:gap-2">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-slate-900 group-hover:text-cyan-900 transition-colors">Más control y seguridad</h3>
-                  <span class="text-xs font-semibold text-cyan-900/80 bg-cyan-50 px-2.5 py-1 rounded-full w-fit">Confianza</span>
-                </div>
-                <p class="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">Tú decides permisos, accesos y reglas. Mayor protección para tu información crítica.</p>
-              </div>
-            </div>
-          </div>
-          <div class="mt-4 md:mt-5 lg:mt-6 h-px bg-gradient-to-r from-cyan-100 via-cyan-50 to-transparent"></div>
-        </div>
-
-        <!-- Ahorro a largo plazo -->
-        <div class="group">
-          <div class="flex flex-col md:flex-row md:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 shrink-0 rounded-xl bg-emerald-50 border-2 border-emerald-100 flex items-center justify-center">
-              <img src="assets/banner-servicios/banner-seo.png" alt="Ahorro a largo plazo" class="w-12 h-12 sm:w-14 sm:h-14 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain select-none pointer-events-none" draggable="false" />
-            </div>
-            <div class="flex-1 min-w-0">
-              <div class="flex flex-col gap-1.5 md:gap-2">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-slate-900 group-hover:text-emerald-900 transition-colors">Ahorro a largo plazo</h3>
-                  <span class="text-xs font-semibold text-emerald-900/80 bg-emerald-50 px-2.5 py-1 rounded-full w-fit">Rentable</span>
-                </div>
-                <p class="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">Pagas solo por lo que necesitas. Menos licencias, menos parches y más retorno.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Propiedad y diferenciación -->
-        <div class="group">
-          <div class="flex flex-col md:flex-row md:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 shrink-0 rounded-xl bg-red-50 border-2 border-red-100 flex items-center justify-center">
-              <img src="assets/banner-servicios/banner-security.png" alt="Propiedad y diferenciación" class="w-12 h-12 sm:w-14 sm:h-14 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain select-none pointer-events-none" draggable="false" />
-            </div>
-            <div class="flex-1 min-w-0">
-              <div class="flex flex-col gap-1.5 md:gap-2">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-slate-900 group-hover:text-red-900 transition-colors">Propiedad y diferenciación</h3>
-                  <span class="text-xs font-semibold text-red-900/80 bg-red-50 px-2.5 py-1 rounded-full w-fit">Ventaja</span>
-                </div>
-                <p class="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">El sistema es tuyo. Te diferencia de la competencia y se convierte en un activo estratégico.</p>
-              </div>
-            </div>
-          </div>
+          <div class="mt-4 md:mt-5 lg:mt-6 h-px bg-gradient-to-r from-slate-200 via-slate-100 to-transparent pointer-events-none"></div>
         </div>
 
       </div>

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 export interface Service {
   id: number;
   icon: string;
+  imagePath?: string;
   title: string;
   description: string;
   color: string;
@@ -23,6 +24,7 @@ export class HomeService {
       {
         id: 1,
         icon: '🌐',
+        imagePath: 'assets/banner-servicios/banner-desarrolloweb.png',
         title: 'Desarrollo Web',
         description: 'Aplicaciones web modernas, responsivas y escalables con React, Angular y Vue. Experiencias web de alto rendimiento.',
         color: 'blue',
@@ -39,6 +41,7 @@ export class HomeService {
       {
         id: 2,
         icon: '📱',
+        imagePath: 'assets/banner-servicios/bannerMovil.png',
         title: 'Desarrollo Móvil',
         description: 'Apps nativas y multiplataforma para iOS y Android con React Native, Flutter o desarrollo nativo de alto rendimiento.',
         color: 'indigo',
@@ -55,6 +58,7 @@ export class HomeService {
       {
         id: 3,
         icon: '🎨',
+        imagePath: 'assets/banner-servicios/banner-Ux.png',
         title: 'Diseño UX/UI',
         description: 'Interfaces intuitivas y experiencias de usuario excepcionales. Diseños modernos centrados en el usuario.',
         color: 'pink',
@@ -71,6 +75,7 @@ export class HomeService {
       {
         id: 4,
         icon: '💻',
+        imagePath: 'assets/banner-servicios/banner-diseñoWeb.png',
         title: 'Desarrollo de Software',
         description: 'Software a medida, sistemas empresariales y aplicaciones de escritorio con las mejores prácticas de desarrollo.',
         color: 'emerald',
@@ -87,6 +92,7 @@ export class HomeService {
       {
         id: 5,
         icon: '🔍',
+        imagePath: 'assets/banner-servicios/banner-seo.png',
         title: 'Optimización de SEO',
         description: 'Posicionamiento web, optimización on-page y off-page, análisis de palabras clave y auditorías SEO completas.',
         color: 'orange',
@@ -103,6 +109,7 @@ export class HomeService {
       {
         id: 6,
         icon: '🛠️',
+        imagePath: 'assets/banner-servicios/banner-desarrolloweb.png',
         title: 'Mantenimiento y Soporte',
         description: 'Soporte técnico continuo, actualizaciones, monitoreo 24/7 y SLA personalizado para mantener tu sistema funcionando.',
         color: 'purple',
@@ -119,6 +126,7 @@ export class HomeService {
       {
         id: 7,
         icon: '🔒',
+        imagePath: 'assets/banner-servicios/banner-security.png',
         title: 'Ciberseguridad',
         description: 'Protección integral, auditorías de seguridad, cumplimiento normativo y testing de penetración.',
         color: 'red',

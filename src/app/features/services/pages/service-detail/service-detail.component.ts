@@ -30,58 +30,58 @@ export class ServiceDetailComponent implements OnInit {
     'desarrollo-web': {
       id: 'desarrollo-web',
       title: 'Desarrollo Web',
-      subtitle: 'Aplicaciones web modernas que impulsan tu negocio',
-      description: 'Creamos aplicaciones web modernas, responsivas y escalables utilizando las últimas tecnologías como React, Angular y Vue. Nuestro enfoque se centra en crear experiencias web de alto rendimiento que convierten visitantes en clientes.',
+      subtitle: 'Tu presencia digital profesional que convierte visitantes en clientes',
+      description: 'Transformamos tu visión en una aplicación web que impulsa tu negocio. No solo código y diseño: creamos experiencias web que tus clientes amarán y que generarán resultados reales. Tecnología de vanguardia con React, Angular y Vue que garantiza velocidad, seguridad y escalabilidad sin límites.',
       image: 'assets/banner-servicios/banner-diseñoWeb.png',
       features: [
         {
-          title: 'Diseño Responsivo',
-          description: 'Interfaces que se adaptan perfectamente a cualquier dispositivo, desde móviles hasta pantallas 4K.',
+          title: 'Diseño Responsive',
+          description: 'Tu web se ve bien en celulares, tablets y computadoras. Tus clientes pueden visitarte desde cualquier dispositivo.',
           icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
         },
         {
-          title: 'Alto Rendimiento',
-          description: 'Optimización avanzada para tiempos de carga mínimos y experiencia de usuario fluida.',
+          title: 'Optimizada Para Velocidad',
+          description: 'Buenas prácticas de desarrollo para que tu web cargue rápido y no pierdas visitantes.',
           icon: 'M13 10V3L4 14h7v7l9-11h-7z'
         },
         {
-          title: 'SEO Optimizado',
-          description: 'Arquitectura técnica diseñada para maximizar tu visibilidad en motores de búsqueda.',
+          title: 'Preparada Para SEO',
+          description: 'Estructura técnica correcta para que Google pueda indexar tu web. La base para aparecer en búsquedas.',
           icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
         },
         {
-          title: 'Seguridad Integral',
-          description: 'Protección contra vulnerabilidades web y cumplimiento de estándares de seguridad.',
+          title: 'Certificado SSL Incluido',
+          description: 'Conexión segura HTTPS para proteger los datos de tus visitantes. Esencial para cualquier web moderna.',
           icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
         },
         {
-          title: 'Panel de Administración',
-          description: 'Sistema de gestión intuitivo para controlar tu contenido sin conocimientos técnicos.',
+          title: 'Fácil de Actualizar',
+          description: 'Sistema de gestión simple para que puedas cambiar contenido sin conocimientos técnicos. O te ayudamos nosotros.',
           icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
         },
         {
-          title: 'Escalabilidad',
-          description: 'Arquitectura preparada para crecer con tu negocio sin límites técnicos.',
+          title: 'Hosting Confiable',
+          description: 'Tu web estará en servidores estables con buen uptime. Tus clientes podrán visitarte cuando lo necesiten.',
           icon: 'M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z'
         }
       ],
       technologies: ['Angular', 'React', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Next.js', 'Express'],
       benefits: [
         {
-          title: 'Presencia Online Profesional',
-          description: 'Destaca frente a tu competencia con una web moderna, profesional y que refleja la calidad de tu marca.'
+          title: 'Presencia Digital Profesional',
+          description: 'Tu negocio estará visible en internet con una imagen profesional. Los clientes podrán encontrarte y conocer tus servicios en cualquier momento.'
         },
         {
-          title: 'Mayor Conversión',
-          description: 'Diseño centrado en la conversión que transforma visitantes en clientes potenciales y ventas.'
+          title: 'Genera Más Confianza',
+          description: 'Una web bien diseñada transmite profesionalismo y seriedad. Tus clientes confiarán más en tu negocio comparado con no tener presencia digital.'
         },
         {
-          title: 'Reducción de Costos',
-          description: 'Automatiza procesos y reduce costos operativos con una plataforma web eficiente.'
+          title: 'Información Siempre Disponible',
+          description: 'Tus clientes pueden consultar tus servicios, precios y contacto cuando quieran, sin esperar a que abras. Eso facilita que se decidan.'
         },
         {
-          title: 'Escalabilidad Garantizada',
-          description: 'Tu web crecerá contigo. Arquitectura preparada para manejar desde cientos hasta millones de usuarios.'
+          title: 'Crece a Tu Ritmo',
+          description: 'Comenzamos con lo esencial y vamos agregando funcionalidades según tu negocio crezca. Inversión inicial razonable, mejoras cuando las necesites.'
         }
       ],
       process: [
@@ -120,58 +120,58 @@ export class ServiceDetailComponent implements OnInit {
     'desarrollo-movil': {
       id: 'desarrollo-movil',
       title: 'Desarrollo Móvil',
-      subtitle: 'Apps nativas y multiplataforma de alto rendimiento',
-      description: 'Desarrollamos aplicaciones móviles nativas y multiplataforma para iOS y Android utilizando React Native, Flutter y desarrollo nativo. Apps que tus usuarios amarán usar todos los días.',
+      subtitle: 'La app que posicionará tu marca en el bolsillo de tus clientes',
+      description: 'El 70% del tráfico web viene de móviles. ¿Por qué no estar donde tus clientes pasan más tiempo? Creamos apps iOS y Android que generan engagement real, ventas recurrentes y lealtad de marca. Una inversión, dos plataformas, resultados exponenciales.',
       image: 'assets/banner-servicios/bannerMovil.png',
       features: [
         {
-          title: 'Apps Multiplataforma',
-          description: 'Una sola base de código para iOS y Android, reduciendo tiempos y costos de desarrollo.',
+          title: 'Una App, Dos Plataformas',
+          description: 'Funciona en iPhone y Android. Ahorras tiempo y dinero sin sacrificar calidad.',
           icon: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
         },
         {
-          title: 'Rendimiento Nativo',
-          description: 'Experiencia fluida y rápida que rivaliza con aplicaciones completamente nativas.',
+          title: 'Rápida y Fluida',
+          description: 'Se siente nativa. Responde instantáneamente. Tus usuarios la amarán usar.',
           icon: 'M13 10V3L4 14h7v7l9-11h-7z'
         },
         {
-          title: 'Notificaciones Push',
-          description: 'Sistema completo de notificaciones para mantener a tus usuarios comprometidos.',
+          title: 'Notificaciones Inteligentes',
+          description: 'Envía ofertas y recordatorios directo al celular de tus clientes. Ventas automáticas.',
           icon: 'M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9'
         },
         {
-          title: 'Modo Offline',
-          description: 'Funcionalidad completa incluso sin conexión a internet con sincronización automática.',
+          title: 'Funciona Sin Internet',
+          description: 'Tus clientes usan la app en el metro, avión o cualquier lugar. Se sincroniza cuando hay conexión.',
           icon: 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
         },
         {
-          title: 'Integración Nativa',
-          description: 'Acceso completo a cámara, GPS, sensores y todas las funcionalidades del dispositivo.',
+          title: 'Usa Cámara, GPS y Más',
+          description: 'Acceso completo al celular: toma fotos, escanea códigos, usa ubicación. Experiencia completa.',
           icon: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z'
         },
         {
-          title: 'Publicación en Stores',
-          description: 'Gestión completa del proceso de publicación en App Store y Google Play Store.',
+          title: 'Publicación Incluida',
+          description: 'Nosotros subimos tu app a App Store y Google Play. Tú solo empiezas a recibir descargas.',
           icon: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12'
         }
       ],
       technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase', 'SQLite', 'Redux', 'TypeScript'],
       benefits: [
         {
-          title: 'Alcance Masivo',
-          description: 'Llega a usuarios de iOS y Android con una sola aplicación, maximizando tu alcance de mercado.'
+          title: 'Llega a Más Clientes',
+          description: 'La mayoría de personas usan el celular más que la computadora. Una app te pone directo en su bolsillo.'
         },
         {
-          title: 'Experiencia Premium',
-          description: 'Apps rápidas, fluidas y con diseño nativo que tus usuarios amarán.'
+          title: 'Notificaciones Directas',
+          description: 'Puedes enviar ofertas y novedades directamente al celular de tus clientes. Es más personal que un correo.'
         },
         {
-          title: 'Menor Costo',
-          description: 'Desarrollo multiplataforma significa menos inversión y más rápido time-to-market.'
+          title: 'Una App, Dos Sistemas',
+          description: 'Con tecnología multiplataforma desarrollamos una vez y funciona en iPhone y Android. Ahorras tiempo y dinero.'
         },
         {
-          title: 'Engagement Superior',
-          description: 'Las apps móviles generan 3x más engagement que sitios web móviles.'
+          title: 'Destaca de la Competencia',
+          description: 'Tener una app te diferencia. Proyectas profesionalismo e innovación ante tus clientes.'
         }
       ],
       process: [
@@ -210,58 +210,58 @@ export class ServiceDetailComponent implements OnInit {
     'diseno-ux-ui': {
       id: 'diseno-ux-ui',
       title: 'Diseño UX/UI',
-      subtitle: 'Experiencias digitales que enamoran a tus usuarios',
-      description: 'Creamos interfaces intuitivas y experiencias de usuario excepcionales. Diseños modernos, funcionales y centrados en el usuario que convierten y deleitan.',
+      subtitle: 'El diseño que convierte visitantes en compradores compulsivos',
+      description: 'Tus competidores invierten en publicidad. Los ganadores invierten en diseño UX. Creamos interfaces que guían al usuario directo a la compra, eliminando fricción y dudas. Cada pixel con propósito, cada clic planificado, cada pantalla optimizada para convertir. El ROI del buen diseño: $100 por cada $1 invertido.',
       image: 'assets/banner-servicios/banner-Ux.png',
       features: [
         {
-          title: 'Investigación de Usuarios',
-          description: 'Análisis profundo de tu audiencia para entender sus necesidades, comportamientos y preferencias.',
+          title: 'Entendemos a Tus Clientes',
+          description: 'Investigamos qué quieren, qué necesitan y qué los frustra. Diseñamos para ELLOS, no para nosotros.',
           icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
         },
         {
-          title: 'Wireframes y Prototipos',
-          description: 'Prototipos interactivos que permiten validar ideas antes de invertir en desarrollo.',
+          title: 'Probamos Antes de Construir',
+          description: 'Creas prototipos interactivos. Ves cómo funcionará todo antes de invertir en desarrollo. Sin sorpresas.',
           icon: 'M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5z'
         },
         {
-          title: 'Diseño de Interfaces',
-          description: 'Diseños visuales atractivos, modernos y alineados con la identidad de tu marca.',
+          title: 'Belleza Que Vende',
+          description: 'Diseños atractivos que reflejan tu marca y guían al cliente hacia la compra. Cada color, cada botón tiene propósito.',
           icon: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01'
         },
         {
-          title: 'Sistema de Diseño',
-          description: 'Librería de componentes reutilizables que garantiza consistencia en todo tu producto.',
+          title: 'Todo Consistente',
+          description: 'Creamos una biblioteca de componentes. Mismos botones, colores y estilo en toda tu plataforma. Profesional.',
           icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
         },
         {
-          title: 'Testing de Usabilidad',
-          description: 'Pruebas con usuarios reales para validar y optimizar la experiencia.',
+          title: 'Probado Con Usuarios Reales',
+          description: 'Ponemos tu diseño frente a personas reales. Vemos qué funciona y qué no. Mejoramos basados en hechos.',
           icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
         },
         {
-          title: 'Accesibilidad',
-          description: 'Diseños inclusivos que funcionan para todos, incluyendo personas con discapacidades.',
+          title: 'Accesible Para Todos',
+          description: 'Diseños que cualquier persona puede usar, incluyendo adultos mayores y personas con discapacidades. Más clientes potenciales.',
           icon: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z'
         }
       ],
       technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Miro', 'Zeplin', 'Principle', 'Framer'],
       benefits: [
         {
-          title: 'Mayor Conversión',
-          description: 'Un buen diseño UX puede aumentar tus conversiones hasta un 400%.'
+          title: 'Mejor Primera Impresión',
+          description: 'Un buen diseño hace que tu producto se vea profesional y confiable. La primera impresión cuenta.'
         },
         {
-          title: 'Reducción de Costos',
-          description: 'Detectar problemas en la fase de diseño es 100x más barato que corregirlos en producción.'
+          title: 'Evita Errores Costosos',
+          description: 'Probar el diseño antes de desarrollar ayuda a identificar problemas tempranos. Cambiar diseño es más barato que cambiar código.'
         },
         {
-          title: 'Ventaja Competitiva',
-          description: 'El 88% de usuarios no vuelven a un sitio después de una mala experiencia.'
+          title: 'Facilita el Uso',
+          description: 'Un diseño pensado en el usuario hace que tu producto sea fácil de usar. Menos confusión, más satisfacción.'
         },
         {
-          title: 'ROI Comprobado',
-          description: 'Cada dólar invertido en UX retorna $100 en promedio según Forrester Research.'
+          title: 'Reduce Soporte',
+          description: 'Cuando el diseño es claro e intuitivo, tus clientes necesitan menos ayuda. Ahorras tiempo en explicaciones.'
         }
       ],
       process: [
@@ -300,58 +300,58 @@ export class ServiceDetailComponent implements OnInit {
     'desarrollo-software': {
       id: 'desarrollo-software',
       title: 'Desarrollo de Software',
-      subtitle: 'Software a medida que transforma tu negocio',
-      description: 'Desarrollamos software personalizado, sistemas empresariales y aplicaciones de escritorio diseñados específicamente para las necesidades únicas de tu negocio.',
+      subtitle: 'El sistema que multiplica tu productividad y elimina el caos operativo',
+      description: '¿Cansado de adaptar tu negocio a software genérico? Software a medida que se adapta a TI, no al revés. Eliminamos tareas manuales, errores humanos y procesos lentos. Automatización inteligente que libera a tu equipo para enfocarse en lo que importa: crecer y vender. Tu ventaja competitiva en código.',
       image: 'assets/banner-servicios/banner-desarrolloweb.png',
       features: [
         {
-          title: 'Software Personalizado',
-          description: 'Soluciones diseñadas exactamente para tus procesos de negocio, no al revés.',
+          title: 'Hecho Para Ti, No Genérico',
+          description: 'Tu negocio es único. Tu software también. Se adapta a TUS procesos, no tú a él. Funciona como tú quieres.',
           icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
         },
         {
-          title: 'Sistemas ERP/CRM',
-          description: 'Gestión integral de recursos empresariales y relaciones con clientes.',
+          title: 'Gestiona Todo en Un Solo Lugar',
+          description: 'Clientes, ventas, inventario, reportes. Todo conectado. Ya no necesitas 5 programas diferentes.',
           icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
         },
         {
-          title: 'Automatización',
-          description: 'Elimina tareas repetitivas y aumenta la eficiencia operativa.',
+          title: 'Automatiza Lo Repetitivo',
+          description: 'El sistema hace las tareas aburridas. Tu equipo se enfoca en vender y atender clientes. Más productividad.',
           icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
         },
         {
-          title: 'Integración de Sistemas',
-          description: 'Conecta todas tus herramientas y sistemas para que trabajen en conjunto.',
+          title: 'Conecta Tus Herramientas',
+          description: 'Integramos con lo que ya usas: WhatsApp, correo, contabilidad. Todo habla entre sí.',
           icon: 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
         },
         {
-          title: 'Apps de Escritorio',
-          description: 'Aplicaciones multiplataforma para Windows, macOS y Linux.',
+          title: 'Funciona en Cualquier Computadora',
+          description: 'Windows, Mac, tu navegador. Trabaja desde donde estés. Oficina, casa o café.',
           icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
         },
         {
-          title: 'Arquitectura Escalable',
-          description: 'Diseño preparado para crecer con tu empresa sin limitaciones.',
+          title: 'Preparado Para Crecer',
+          description: '5 usuarios hoy, 500 mañana. El sistema crece contigo sin problemas ni costos extra.',
           icon: 'M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z'
         }
       ],
       technologies: ['Java', 'Python', '.NET', 'C#', 'PostgreSQL', 'MySQL', 'Docker', 'Kubernetes', 'Redis', 'RabbitMQ'],
       benefits: [
         {
-          title: 'Eficiencia Operativa',
-          description: 'Automatiza procesos y reduce hasta un 70% el tiempo en tareas administrativas.'
+          title: 'Adapta la Tecnología a Tu Negocio',
+          description: 'Software hecho específicamente para cómo trabajas tú. No tienes que cambiar tus procesos exitosos para adaptarte a un programa genérico.'
         },
         {
-          title: 'Ventaja Competitiva',
-          description: 'Software único que se adapta a tu negocio, no soluciones genéricas.'
+          title: 'Tu Ventaja Competitiva',
+          description: 'Un sistema propio te diferencia. Mientras tu competencia usa lo mismo que todos, tú tienes una herramienta única para tu negocio.'
         },
         {
-          title: 'ROI Rápido',
-          description: 'La automatización y eficiencia se traducen en retorno de inversión en meses.'
+          title: 'Automatiza Tareas Repetitivas',
+          description: 'El software hace las tareas aburridas y repetitivas. Tu equipo puede enfocarse en actividades más importantes como vender y atender clientes.'
         },
         {
-          title: 'Escalabilidad Total',
-          description: 'Crece sin límites técnicos. Tu software evoluciona con tu empresa.'
+          title: 'Escalable a Tu Ritmo',
+          description: 'Empiezas con lo básico y vas agregando funciones cuando las necesites. Crece junto con tu negocio.'
         }
       ],
       process: [
@@ -390,58 +390,58 @@ export class ServiceDetailComponent implements OnInit {
     'optimizacion-seo': {
       id: 'optimizacion-seo',
       title: 'Optimización SEO',
-      subtitle: 'Domina los resultados de búsqueda y atrae más clientes',
-      description: 'Estrategias SEO integrales que posicionan tu negocio en los primeros resultados de Google. Más tráfico orgánico, más conversiones, más ventas.',
+      subtitle: 'Domina Google y deja de pagar por cada clic que recibes',
+      description: 'Tus competidores pagan miles en Google Ads. Tú aparecerás GRATIS en los primeros resultados. SEO es inversión única con resultados perpetuos. Capturamos a tus clientes justo cuando buscan lo que vendes. Tráfico calificado, conversiones reales, ROI comprobado. Posicionamiento que dura años, no días.',
       image: 'assets/banner-servicios/banner-seo.png',
       features: [
         {
-          title: 'Auditoría SEO Completa',
-          description: 'Análisis exhaustivo de tu sitio identificando problemas técnicos y oportunidades de mejora.',
+          title: 'Diagnóstico Completo',
+          description: 'Revisamos TODO tu sitio. Encontramos qué te impide aparecer en Google y cómo arreglarlo.',
           icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4'
         },
         {
-          title: 'Research de Keywords',
-          description: 'Investigación profunda de palabras clave con alto potencial de conversión para tu negocio.',
+          title: 'Palabras Clave Ganadoras',
+          description: 'Encontramos las búsquedas exactas que usan tus clientes. Aparecerás cuando te busquen.',
           icon: 'M7 20l4-16m2 16l4-16M6 9h14M4 15h14'
         },
         {
-          title: 'SEO On-Page',
-          description: 'Optimización de contenido, meta tags, estructura y elementos internos de tu sitio.',
+          title: 'Optimizamos Tu Contenido',
+          description: 'Ajustamos textos, imágenes y estructura. Google entenderá de qué trata tu sitio y te subirá.',
           icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
         },
         {
-          title: 'SEO Técnico',
-          description: 'Velocidad, arquitectura, indexación y todos los aspectos técnicos que Google valora.',
+          title: 'Arreglamos Lo Técnico',
+          description: 'Velocidad, errores, enlaces rotos. Todo lo invisible que Google revisa lo dejamos perfecto.',
           icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
         },
         {
-          title: 'Link Building',
-          description: 'Estrategia de enlaces externos de calidad que aumentan tu autoridad de dominio.',
+          title: 'Construimos Tu Autoridad',
+          description: 'Conseguimos que otros sitios hablen de ti. Google te ve importante y te sube en resultados.',
           icon: 'M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1'
         },
         {
-          title: 'Reportes y Analytics',
-          description: 'Seguimiento detallado de rankings, tráfico y conversiones con reportes mensuales.',
+          title: 'Reportes Claros',
+          description: 'Cada mes ves tus avances: posiciones, visitas, leads. Números claros, resultados reales.',
           icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
         }
       ],
       technologies: ['Google Analytics', 'Search Console', 'SEMrush', 'Ahrefs', 'Screaming Frog', 'Google Tag Manager'],
       benefits: [
         {
-          title: 'Tráfico Orgánico de Calidad',
-          description: 'Atrae visitantes que buscan activamente lo que ofreces. Tráfico calificado que convierte.'
+          title: 'Tráfico Orgánico Constante',
+          description: 'A diferencia de los anuncios pagados, el tráfico de SEO no se detiene cuando dejas de pagar. Es una inversión a largo plazo.'
         },
         {
-          title: 'ROI a Largo Plazo',
-          description: 'A diferencia de los anuncios, el SEO genera resultados duraderos con inversión única.'
+          title: 'Más Costo-Efectivo Que Publicidad',
+          description: 'En lugar de pagar por cada clic, inviertes una vez en optimización y los resultados duran. Con el tiempo, el costo por visita baja mucho.'
         },
         {
-          title: 'Autoridad de Marca',
-          description: 'Aparecer en los primeros resultados genera confianza y posiciona tu marca como líder.'
+          title: 'Mayor Confianza',
+          description: 'Los usuarios confían más en resultados orgánicos que en anuncios. Aparecer naturalmente transmite autoridad y credibilidad.'
         },
         {
           title: 'Ventaja Competitiva',
-          description: 'Supera a tu competencia en resultados de búsqueda y captura su mercado.'
+          description: 'Si estás en la primera página y tu competencia no, tienes una ventaja grande. Capturas clientes que ellos pierden.'
         }
       ],
       process: [
@@ -480,58 +480,58 @@ export class ServiceDetailComponent implements OnInit {
     'ciberseguridad': {
       id: 'ciberseguridad',
       title: 'Ciberseguridad',
-      subtitle: 'Protección integral para tu negocio digital',
-      description: 'Servicios completos de ciberseguridad que protegen tu negocio contra amenazas digitales. Auditorías, pentesting, cumplimiento normativo y más.',
+      subtitle: 'Protege tu negocio o pierde todo en un solo ataque',
+      description: 'Un ciberataque cuesta en promedio $4.5 millones y destruye reputaciones en minutos. El 60% de pequeñas empresas cierran en 6 meses tras ser hackeadas. No seas una estadística. Protección proactiva 24/7, cumplimiento normativo garantizado y respuesta inmediata ante amenazas. Tu tranquilidad tiene precio, perderlo todo también.',
       image: 'assets/banner-servicios/banner-security.png',
       features: [
         {
-          title: 'Auditorías de Seguridad',
-          description: 'Evaluación exhaustiva de tu infraestructura identificando vulnerabilidades antes que los atacantes.',
+          title: 'Revisión de Seguridad',
+          description: 'Analizamos tu sistema para encontrar puntos vulnerables antes de que alguien más los encuentre.',
           icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
         },
         {
-          title: 'Penetration Testing',
-          description: 'Simulamos ataques reales para descubrir y corregir puntos débiles en tu sistema.',
+          title: 'Pruebas de Seguridad',
+          description: 'Simulamos intentos de acceso no autorizado para ver qué tan seguro está tu sistema y mejorarlo.',
           icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
         },
         {
-          title: 'Monitoreo 24/7',
-          description: 'Vigilancia continua de tu infraestructura con respuesta inmediata ante amenazas.',
+          title: 'Protección de Datos',
+          description: 'Implementamos medidas para proteger tu información y la de tus clientes contra accesos no autorizados.',
           icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
         },
         {
-          title: 'Cumplimiento Normativo',
-          description: 'Te ayudamos a cumplir con GDPR, ISO 27001, PCI-DSS y otras normativas.',
+          title: 'Cumplimiento de Normativas',
+          description: 'Te ayudamos a cumplir con las leyes de protección de datos y regulaciones de tu industria.',
           icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
         },
         {
-          title: 'Plan de Respuesta',
-          description: 'Protocolos y procedimientos para responder efectivamente ante incidentes de seguridad.',
+          title: 'Plan de Emergencia',
+          description: 'Creamos un plan claro de qué hacer si ocurre un incidente de seguridad. Prevención y respuesta.',
           icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
         },
         {
-          title: 'Capacitación',
-          description: 'Formación de tu equipo en mejores prácticas de seguridad y concienciación.',
+          title: 'Capacitación del Equipo',
+          description: 'Enseñamos a tu equipo buenas prácticas de seguridad. La mejor defensa es un equipo informado.',
           icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
         }
       ],
       technologies: ['SSL/TLS', 'Firewalls', 'WAF', 'SIEM', 'IDS/IPS', 'OAuth 2.0', 'Encryption', 'VPN'],
       benefits: [
         {
-          title: 'Protección Total',
-          description: 'Salvaguarda tus datos, sistemas y la información de tus clientes.'
+          title: 'Protege tu Información',
+          description: 'Reduce el riesgo de que roben o dañen tus datos importantes y los de tus clientes.'
         },
         {
-          title: 'Cumplimiento Legal',
-          description: 'Evita multas millonarias y problemas legales por incumplimiento normativo.'
+          title: 'Cumple con la Ley',
+          description: 'Evita multas y problemas legales cumpliendo con las regulaciones de protección de datos de tu industria.'
         },
         {
-          title: 'Confianza del Cliente',
-          description: 'Los clientes confían más en empresas que toman en serio la seguridad.'
+          title: 'Genera Confianza',
+          description: 'Los clientes confian más en empresas que se toman en serio la seguridad de su información.'
         },
         {
-          title: 'Continuidad del Negocio',
-          description: 'Previene pérdidas de datos, downtime y costos asociados a brechas de seguridad.'
+          title: 'Previene Pérdidas',
+          description: 'Un problema de seguridad puede costar mucho dinero y reputación. Prevenirlo es más barato que resolverlo después.'
         }
       ],
       process: [

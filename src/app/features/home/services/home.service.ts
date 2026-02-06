@@ -108,24 +108,7 @@ export class HomeService {
       },
       {
         id: 6,
-        icon: '🛠️',
-        imagePath: 'assets/banner-servicios/banner-desarrolloweb.png',
-        title: 'Mantenimiento y Soporte',
-        description: 'Soporte técnico continuo, actualizaciones, monitoreo 24/7 y SLA personalizado para mantener tu sistema funcionando.',
-        color: 'purple',
-        borderColor: 'border-purple-500',
-        shadowColor: 'shadow-purple-500/20',
-        features: [
-          'Soporte técnico 24/7',
-          'Actualizaciones y mejoras continuas',
-          'Monitoreo proactivo',
-          'SLA personalizado',
-          'Backup y recuperación'
-        ]
-      },
-      {
-        id: 7,
-        icon: '🔒',
+        icon: '',
         imagePath: 'assets/banner-servicios/banner-security.png',
         title: 'Ciberseguridad',
         description: 'Protección integral, auditorías de seguridad, cumplimiento normativo y testing de penetración.',

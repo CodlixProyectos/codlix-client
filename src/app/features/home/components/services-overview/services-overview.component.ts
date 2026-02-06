@@ -28,11 +28,10 @@ export class ServicesOverviewComponent implements OnInit {
       2: 'desarrollo-movil',
       3: 'diseno-ux-ui',
       4: 'desarrollo-software',
-      5: 'seo',
-      6: 'mantenimiento',
-      7: 'ciberseguridad'
+      5: 'optimizacion-seo',
+      6: 'ciberseguridad'
     };
-    
+
     const serviceSlug = serviceIdMap[serviceId];
     if (serviceSlug) {
       this.router.navigate(['/services', serviceSlug]);

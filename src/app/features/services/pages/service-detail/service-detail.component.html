@@ -39,88 +39,8 @@
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-          Lo Que <span class="text-blue-900">Incluimos</span>
-        </h2>
-        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-          Aspectos clave que cubrimos en nuestro servicio de {{ service.title }}
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div *ngFor="let feature of service.features"
-             class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-900 hover:shadow-lg transition-all duration-300 group">
-          <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-900 transition-colors">
-            <svg class="w-6 h-6 text-blue-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="feature.icon"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">{{ feature.title }}</h3>
-          <p class="text-slate-600 leading-relaxed text-sm">{{ feature.description }}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Technologies Section -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-          <span class="text-blue-900">Tecnologías</span> que Utilizamos
-        </h2>
-        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-          Trabajamos con las herramientas más modernas y confiables de la industria
-        </p>
-      </div>
-
-      <div class="flex flex-wrap justify-center gap-4">
-        <span *ngFor="let tech of service.technologies"
-              class="px-6 py-3 bg-slate-50 border-2 border-slate-200 text-slate-900 rounded-full font-bold text-lg hover:bg-blue-900 hover:text-white hover:border-blue-900 transition-all duration-300 cursor-default">
-          {{ tech }}
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits Section -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-          Beneficios <span class="text-blue-900">para tu Negocio</span>
-        </h2>
-        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-          Impacto real y medible en tu empresa
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div *ngFor="let benefit of service.benefits; let i = index"
-             class="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:shadow-xl transition-all duration-300"
-             [class.border-blue-900]="i === 0">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 mb-3">{{ benefit.title }}</h3>
-              <p class="text-slate-600 leading-relaxed text-lg">{{ benefit.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Project Examples Section -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-white">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
@@ -135,7 +55,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <div *ngFor="let project of service.projectExamples"
              (click)="selectProject(project)"
-             class="bg-slate-50 p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg"
+             class="bg-white p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg"
              [class.border-blue-900]="selectedProject?.id === project.id"
              [class.bg-blue-50]="selectedProject?.id === project.id"
              [class.border-slate-200]="selectedProject?.id !== project.id">
@@ -242,6 +162,86 @@
         </svg>
         <p class="text-slate-600 text-lg font-medium mb-2">Selecciona un proyecto para ver más detalles</p>
         <p class="text-slate-500">Haz clic en cualquier tarjeta para conocer las características y casos de uso</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          Lo Que <span class="text-blue-900">Incluimos</span>
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Aspectos clave que cubrimos en nuestro servicio de {{ service.title }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let feature of service.features"
+             class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-900 hover:shadow-lg transition-all duration-300 group">
+          <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-900 transition-colors">
+            <svg class="w-6 h-6 text-blue-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="feature.icon"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">{{ feature.title }}</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          <span class="text-blue-900">Tecnologías</span> que Utilizamos
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Trabajamos con las herramientas más modernas y confiables de la industria
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <span *ngFor="let tech of service.technologies"
+              class="px-6 py-3 bg-slate-50 border-2 border-slate-200 text-slate-900 rounded-full font-bold text-lg hover:bg-blue-900 hover:text-white hover:border-blue-900 transition-all duration-300 cursor-default">
+          {{ tech }}
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          Beneficios <span class="text-blue-900">para tu Negocio</span>
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Impacto real y medible en tu empresa
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div *ngFor="let benefit of service.benefits; let i = index"
+             class="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:shadow-xl transition-all duration-300"
+             [class.border-blue-900]="i === 0">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-3">{{ benefit.title }}</h3>
+              <p class="text-slate-600 leading-relaxed text-lg">{{ benefit.description }}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

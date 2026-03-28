@@ -28,10 +28,19 @@ export class PortfolioPageComponent {
       id: 1,
       name: 'Ubicatee',
       description: 'Sistema de gestión y seguimiento de ubicaciones en tiempo real con autenticación y panel de administración.',
-      image: 'assets/images/ubicatee-preview.png',
+      image: '/ubicatee.png',
       technologies: ['Angular', 'TypeScript', 'Tailwind CSS', 'Firebase'],
       demoUrl: 'https://ubicatee.netlify.app/auth/login',
       category: 'Web App'
+    },
+    {
+      id: 2,
+      name: 'RESTO DEV',
+      description: 'Plataforma SaaS integral para la gestión de restaurantes, incluyendo control de inventario, facturación electrónica y analíticas en tiempo real.',
+      image: '/restodev.png',
+      technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Docker'],
+      demoUrl: 'https://app.codlyp.website/',
+      category: 'SaaS Platform'
     }
   ];
 

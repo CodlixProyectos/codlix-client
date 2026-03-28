@@ -1,48 +1,55 @@
 <!-- Modal Backdrop -->
-<div *ngIf="isOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300"
+<div *ngIf="isOpen" 
+  class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/40 backdrop-blur-sm transition-all duration-500"
   (click)="onClose()">
 
   <!-- Modal Content -->
-  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 transform transition-all duration-300"
+  <div class="relative bg-white rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] max-w-lg w-full mx-4 border border-slate-100 overflow-hidden transform transition-all duration-500 scale-100"
     (click)="$event.stopPropagation()">
 
-    <!-- Header -->
-    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-5 rounded-t-2xl">
-      <h3 class="text-2xl font-bold">¡Descubre {{ projectName }}!</h3>
-      <p class="text-blue-100 text-sm mt-1">Parte de nuestro portafolio</p>
-    </div>
-
-    <!-- Body -->
-    <div class="p-6 space-y-4">
-      <p class="text-gray-700 text-base leading-relaxed">
-        Este es uno de nuestros proyectos en producción. ¿Te gustaría probarlo o conocer más sobre cómo podemos ayudarte con una solución similar?
-      </p>
-
-      <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
-        <p class="text-sm text-blue-900">
-          💡 <span class="font-semibold">Consejo:</span> Si necesitas un sistema como este, agenda una cita con nosotros para discutir tu proyecto.
-        </p>
+    <!-- Header Section -->
+    <div class="relative px-10 pt-12 pb-8 bg-slate-50/50 border-b border-slate-100">
+      <div class="flex items-center gap-5">
+        <div class="p-2.5 bg-blue-50/50 rounded-xl">
+          <svg class="w-6 h-6 text-blue-900 transform -rotate-12" 
+               fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-3xl font-bold text-slate-900 tracking-tight leading-none mb-2">¡Hola! 👋</h3>
+          <p class="text-blue-900 font-bold text-xs uppercase tracking-widest">{{ projectName }}</p>
+        </div>
       </div>
     </div>
 
-    <!-- Actions -->
-    <div class="px-6 pb-6 space-y-3">
-      <button
-        (click)="onOpenProject()"
-        class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg">
-        Ver Proyecto en Vivo
-      </button>
+    <!-- Body -->
+    <div class="relative px-10 pt-10 pb-12 space-y-8">
+      <p class="text-slate-600 text-lg font-light leading-relaxed">
+        Estás a punto de conocer una de nuestras soluciones de software a medida en **Codlyp**. ¿Te gustaría verla en acción o agendar una consultoría gratuita para tu negocio?
+      </p>
 
-      <button
-        (click)="onScheduleCall()"
-        class="w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-4 rounded-lg transition-all duration-200">
-        Agenda una Cita con Nosotros
-      </button>
+      <div class="space-y-4">
+        <button
+          (click)="onOpenProject()"
+          class="group relative w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-5 px-8 rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 flex items-center justify-center gap-3">
+          Ver Proyecto en Vivo
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </button>
+
+        <button
+          (click)="onScheduleCall()"
+          class="w-full bg-white border-2 border-slate-200 text-slate-700 hover:bg-slate-50 font-bold py-5 px-8 rounded-xl transition-all duration-300">
+          Agenda una Cita Estratégica
+        </button>
+      </div>
 
       <button
         (click)="onClose()"
-        class="w-full text-gray-500 hover:text-gray-700 font-medium py-2 px-4 rounded-lg transition-all duration-200">
-        Cerrar
+        class="w-full text-slate-400 hover:text-slate-600 font-bold py-2 transition-colors duration-300 text-xs uppercase tracking-[0.2em]">
+        Cerrar y volver al Portafolio
       </button>
     </div>
   </div>

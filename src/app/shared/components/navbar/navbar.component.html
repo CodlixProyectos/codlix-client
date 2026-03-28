@@ -3,7 +3,7 @@
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     
     <!-- Logo -->
-    <a routerLink="/" class="flex items-center gap-3 group">
+    <a [routerLink]="['/']" fragment="inicio" class="flex items-center gap-3 group">
       <div class="relative flex items-center justify-center">
         <!-- Lightning Icon (Fast & Modern) -->
         <svg class="w-8 h-8 text-blue-900 transform -rotate-12 group-hover:scale-110 group-hover:drop-shadow-sm transition-all duration-300" 
@@ -16,13 +16,13 @@
 
     <!-- Desktop Menu -->
     <div class="hidden lg:flex items-center gap-8">
-      <a routerLink="/" routerLinkActive="text-blue-900 font-semibold" [routerLinkActiveOptions]="{exact: true}"
+      <a [routerLink]="['/']" fragment="inicio" routerLinkActive="text-blue-900 font-semibold" [routerLinkActiveOptions]="{exact: true}"
          class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Inicio</a>
-      <a (click)="scrollToServices()" 
+      <a [routerLink]="['/']" fragment="services" routerLinkActive="text-blue-900 font-semibold"
          class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors cursor-pointer">Servicios</a>
       <a routerLink="/portfolio" routerLinkActive="text-blue-900 font-semibold"
          class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Portafolio</a>
-      <a routerLink="/about" routerLinkActive="text-blue-900 font-semibold"
+      <a [routerLink]="['/']" fragment="nosotros" routerLinkActive="text-blue-900 font-semibold"
          class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Nosotros</a>
       <a routerLink="/contact"
          class="ml-4 px-6 py-2.5 bg-blue-900 text-white text-sm font-semibold rounded-xl hover:bg-blue-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
@@ -44,10 +44,10 @@
   <!-- Mobile Menu -->
   <div *ngIf="isMenuOpen" 
        class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 py-6 px-4 space-y-4 animate-in fade-in slide-in-from-top-4 duration-300">
-    <a routerLink="/" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Inicio</a>
-    <a (click)="scrollToServices()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg cursor-pointer">Servicios</a>
+    <a [routerLink]="['/']" fragment="inicio" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Inicio</a>
+    <a [routerLink]="['/']" fragment="services" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg cursor-pointer">Servicios</a>
     <a routerLink="/portfolio" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Portafolio</a>
-    <a routerLink="/about" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Nosotros</a>
+    <a [routerLink]="['/']" fragment="nosotros" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Nosotros</a>
     <a routerLink="/contact" (click)="closeMenu()" 
        class="block text-center w-full mt-4 px-6 py-3 bg-blue-900 text-white font-semibold rounded-xl shadow-md">
       Iniciar Proyecto

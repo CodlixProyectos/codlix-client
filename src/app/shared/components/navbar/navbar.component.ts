@@ -24,12 +24,4 @@ export class NavbarComponent {
   closeMenu() {
     this.isMenuOpen = false;
   }
-
-  scrollToServices() {
-    this.closeMenu();
-    const element = document.getElementById('services');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 }

@@ -1,24 +1,24 @@
-<section class="py-24 bg-white relative overflow-hidden">
+<section class="py-16 sm:py-24 bg-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
     <!-- Header -->
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+    <div class="text-center mb-12 sm:mb-16">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
         Arquitectura tecnológica de <span class="text-blue-900">primer nivel</span>
       </h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto font-light">
+      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-light">
         Utilizamos las tecnologías más robustas y escalables para garantizar que tu software esté preparado para el futuro.
       </p>
     </div>
 
     <!-- Tech Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-8">
       <div *ngFor="let tech of techs" 
-           class="group bg-slate-50 p-8 rounded-3xl border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-500 text-center flex flex-col items-center justify-center">
-        <div class="w-16 h-16 mb-4 flex items-center justify-center filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+           class="group bg-slate-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-500 text-center flex flex-col items-center justify-center">
+        <div class="w-12 h-12 sm:w-16 sm:h-16 mb-4 flex items-center justify-center filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
           <img [src]="tech.icon" [alt]="tech.name" class="max-w-full max-h-full">
         </div>
-        <h3 class="text-sm font-bold text-slate-800 mb-1">{{ tech.name }}</h3>
-        <p class="text-xs text-slate-400 font-medium">{{ tech.category }}</p>
+        <h3 class="text-sm font-bold text-slate-800 mb-1 leading-tight">{{ tech.name }}</h3>
+        <p class="text-[10px] sm:text-xs text-slate-400 font-medium">{{ tech.category }}</p>
       </div>
     </div>
   </div>

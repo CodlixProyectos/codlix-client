@@ -22,7 +22,7 @@
          class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors cursor-pointer">Servicios</a>
       <a routerLink="/portfolio" routerLinkActive="text-blue-900 font-semibold"
          class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Portafolio</a>
-      <a [routerLink]="['/']" fragment="nosotros" routerLinkActive="text-blue-900 font-semibold"
+      <a routerLink="/about" routerLinkActive="text-blue-900 font-semibold"
          class="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Nosotros</a>
       <a routerLink="/contact"
          class="ml-4 px-6 py-2.5 bg-blue-900 text-white text-sm font-semibold rounded-xl hover:bg-blue-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
@@ -47,7 +47,7 @@
     <a [routerLink]="['/']" fragment="inicio" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Inicio</a>
     <a [routerLink]="['/']" fragment="services" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg cursor-pointer">Servicios</a>
     <a routerLink="/portfolio" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Portafolio</a>
-    <a [routerLink]="['/']" fragment="nosotros" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Nosotros</a>
+    <a routerLink="/about" (click)="closeMenu()" class="block text-base font-medium text-slate-700 hover:text-blue-900 px-4 py-2 rounded-lg">Nosotros</a>
     <a routerLink="/contact" (click)="closeMenu()" 
        class="block text-center w-full mt-4 px-6 py-3 bg-blue-900 text-white font-semibold rounded-xl shadow-md">
       Iniciar Proyecto

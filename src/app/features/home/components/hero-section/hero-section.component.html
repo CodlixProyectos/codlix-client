@@ -81,109 +81,32 @@
       </div>
     </div>
 
-    <!-- Animación de código -->
-    <div class="hidden lg:flex items-center justify-center">
-      <div class="relative w-full max-w-md">
-        <!-- Sombra profunda -->
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-800/20 rounded-2xl blur-2xl transform translate-y-6"></div>
-
-        <!-- Terminal/Editor de código -->
-        <div class="relative bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-700">
-          <!-- Header del terminal -->
-          <div class="bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
-            <div class="flex gap-1.5">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-            <div class="flex-1 text-center">
-              <span class="text-slate-400 text-xs font-mono">app.component.ts</span>
-            </div>
-          </div>
-
-          <!-- Código con animación -->
-          <div class="p-6 font-mono text-sm space-y-2">
-            <!-- Línea 1 -->
-            <div class="flex gap-3">
-              <span class="text-slate-600">1</span>
-              <span class="text-purple-400">import</span>
-              <span class="text-slate-300">&#123; Component &#125;</span>
-              <span class="text-purple-400">from</span>
-              <span class="text-green-400">'@angular/core'</span>
-            </div>
-
-            <!-- Línea 2 -->
-            <div class="flex gap-3">
-              <span class="text-slate-600">2</span>
-              <span class="text-slate-300"></span>
-            </div>
-
-            <!-- Línea 3 -->
-            <div class="flex gap-3">
-              <span class="text-slate-600">3</span>
-              <span class="text-blue-400">@Component</span>
-              <span class="text-slate-300">(&#123;</span>
-            </div>
-
-            <!-- Línea 4 -->
-            <div class="flex gap-3 pl-6">
-              <span class="text-slate-600">4</span>
-              <span class="text-sky-400">selector:</span>
-              <span class="text-green-400">'app-codlix'</span>
-              <span class="text-slate-300">,</span>
-            </div>
-
-            <!-- Línea 5 -->
-            <div class="flex gap-3 pl-6">
-              <span class="text-slate-600">5</span>
-              <span class="text-sky-400">template:</span>
-              <span class="text-green-400">'Excellence'</span>
-            </div>
-
-            <!-- Línea 6 -->
-            <div class="flex gap-3">
-              <span class="text-slate-600">6</span>
-              <span class="text-slate-300">&#125;)</span>
-            </div>
-
-            <!-- Línea 7 -->
-            <div class="flex gap-3">
-              <span class="text-slate-600">7</span>
-              <span class="text-purple-400">export class</span>
-              <span class="text-yellow-400">CODLIX</span>
-              <span class="text-slate-300">&#123;</span>
-            </div>
-
-            <!-- Línea 8 con cursor parpadeante -->
-            <div class="flex gap-3 pl-6">
-              <span class="text-slate-600">8</span>
-              <span class="text-sky-400">status</span>
-              <span class="text-slate-300">=</span>
-              <span class="text-green-400">'building'</span>
-              <span class="w-2 h-4 bg-blue-500 inline-block animate-pulse ml-1"></span>
-            </div>
-
-            <!-- Línea 9 -->
-            <div class="flex gap-3">
-              <span class="text-slate-600">9</span>
-              <span class="text-slate-300">&#125;</span>
-            </div>
-          </div>
-
-          <!-- Footer con stack tecnológico -->
-          <div class="bg-slate-800 px-4 py-3 border-t border-slate-700">
-            <div class="flex items-center justify-between text-xs">
-              <div class="flex items-center gap-3 text-slate-400">
-                <div class="flex items-center gap-1.5">
-                  <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>TypeScript</span>
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                  <span>Angular</span>
-                </div>
+    <!-- Imagen Hero Premium -->
+    <div class="hidden lg:flex items-center justify-center relative">
+      <!-- Sombra y efectos decorativos -->
+      <div class="absolute inset-0 bg-blue-900/10 rounded-3xl blur-3xl transform translate-y-8 scale-95 shadow-2xl"></div>
+      
+      <div class="relative group">
+        <!-- Borde decorativo neón sutil -->
+        <div class="absolute -inset-1 bg-gradient-to-r from-blue-900 to-emerald-400 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+        
+        <div class="relative bg-white p-2 rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
+          <img src="/hero-trust.png" 
+               alt="Codlyp Premium Software Solutions" 
+               class="rounded-2xl w-full h-auto object-cover transform transition duration-500 group-hover:scale-[1.02] shadow-inner">
+          
+          <!-- Badge de confianza estático y serio -->
+          <div class="absolute bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
               </div>
-              <div class="text-blue-400 font-semibold">CODLIX</div>
+              <div>
+                <p class="text-xs text-slate-500 font-medium">Resultados Garantizados</p>
+                <p class="text-sm font-bold text-slate-900">Calidad Premium</p>
+              </div>
             </div>
           </div>
         </div>

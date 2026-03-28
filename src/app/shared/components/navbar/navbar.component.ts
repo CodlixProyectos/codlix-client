@@ -1,34 +1,35 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { NavigationService } from '../../../core/services/navigation.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html'
 })
 export class NavbarComponent {
   isMenuOpen = false;
   isScrolled = false;
 
-  constructor(
-    private router: Router,
-    private navigationService: NavigationService
-  ) {}
-
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 50;
+    this.isScrolled = window.scrollY > 20;
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  scrollToServices() {
+  closeMenu() {
     this.isMenuOpen = false;
-    this.navigationService.scrollToServices();
+  }
+
+  scrollToServices() {
+    this.closeMenu();
+    const element = document.getElementById('services');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

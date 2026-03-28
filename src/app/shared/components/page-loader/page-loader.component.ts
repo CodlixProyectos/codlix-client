@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
           <div class="logo-circle"></div>
           <div class="logo-pulse"></div>
         </div>
-        <h1 class="loader-text">CODLIX</h1>
+        <h1 class="loader-text">Codlyp</h1>
         <div class="loader-bar">
           <div class="loader-progress"></div>
         </div>

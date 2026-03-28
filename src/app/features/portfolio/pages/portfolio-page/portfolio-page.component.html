@@ -1,74 +1,68 @@
-<div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-16 px-4 sm:px-6 lg:px-8">
+<div class="min-h-screen bg-slate-50 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto">
     <!-- Header -->
-    <div class="text-center mb-16">
-      <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
-        NUESTRO TRABAJO
+    <div class="text-center mb-20">
+      <span class="inline-block px-4 py-1.5 bg-blue-900/5 text-blue-900 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+        Nuestro Portafolio
       </span>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-        Proyectos <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Destacados</span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6">
+        Soluciones que transforman <span class="text-blue-900">negocios</span>
       </h1>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Explora algunos de nuestros proyectos en producción y descubre cómo transformamos ideas en soluciones digitales
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto font-light">
+        Explora cómo hemos ayudado a empresas locales a digitalizar sus procesos y escalar mediante tecnología a medida.
       </p>
     </div>
 
     <!-- Projects Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       <div *ngFor="let project of projects"
-        class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer transform hover:-translate-y-2"
+        class="bg-white rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden group cursor-pointer border border-slate-100 flex flex-col h-full"
         (click)="openProjectModal(project)">
 
         <!-- Project Image -->
-        <div class="relative h-64 bg-gradient-to-br from-blue-500 to-indigo-600 overflow-hidden">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="text-white text-center p-6">
-              <div class="w-20 h-20 mx-auto mb-4 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                </svg>
-              </div>
-              <span class="text-sm font-semibold opacity-90">{{ project.category }}</span>
-            </div>
+        <div class="relative h-56 bg-slate-900 overflow-hidden">
+          <img [src]="project.image" [alt]="project.name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          
+          <div class="absolute top-4 left-4 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full">
+            <span class="text-[9px] font-bold uppercase tracking-widest text-white">{{ project.category }}</span>
           </div>
-          <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+
+          <!-- Overlay on hover -->
+          <div class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px] flex items-center justify-center">
+            <span class="px-5 py-2 bg-white text-blue-900 rounded-lg font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl text-sm">
+              Ver Detalles
+            </span>
+          </div>
         </div>
 
         <!-- Project Info -->
-        <div class="p-6">
-          <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors">
             {{ project.name }}
           </h3>
-          <p class="text-gray-600 mb-4 line-clamp-3">
+          <p class="text-slate-600 mb-6 line-clamp-3 font-light leading-relaxed text-sm flex-grow">
             {{ project.description }}
           </p>
 
-          <!-- Technologies -->
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span *ngFor="let tech of project.technologies"
-              class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full">
-              {{ tech }}
-            </span>
-          </div>
-
-          <!-- CTA -->
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-blue-600 font-semibold text-sm">Ver proyecto</span>
-            <svg class="w-5 h-5 text-blue-600 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+          <!-- CTA linking to details -->
+          <div class="flex items-center justify-between pt-4 border-t border-slate-50 mt-auto">
+            <span class="text-blue-900 font-bold text-xs tracking-tight">Detalles del Proyecto</span>
+            <div class="w-7 h-7 rounded-full bg-slate-50 flex items-center justify-center text-blue-900 group-hover:bg-blue-900 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Coming Soon -->
-    <div class="mt-16 text-center">
-      <div class="inline-block bg-white rounded-2xl shadow-md px-8 py-6">
-        <p class="text-gray-600 text-lg">
-          Más proyectos próximamente... 🚀
-        </p>
-      </div>
+    <!-- More Coming Soon -->
+    <div class="mt-24 text-center pb-24">
+      <p class="text-slate-400 font-medium italic">
+        Construyendo el futuro de más empresas locales. Próximos lanzamientos en camino.
+      </p>
     </div>
   </div>
 </div>
